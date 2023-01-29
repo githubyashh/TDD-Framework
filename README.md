@@ -1,5 +1,5 @@
 # TDD-Framework
-Docker pull
+Docker pull, which consist almost all java Selenium basic test required, with log4j and extent report.
 # Webdriver Tests
 ## Prerequisites
   * Docker
