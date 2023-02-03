@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test parallel="classes" name="Test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Test(failed)">
     <classes>
+      <class name="com.qa.selenium.tests.NotificationMessagePageTest">
+        <methods>
+          <include name="notification"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.selenium.tests.NotificationMessagePageTest -->
       <class name="com.qa.selenium.tests.DynamicControlPageTest">
         <methods>
           <include name="removeAddTest"/>
@@ -11,13 +18,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.qa.selenium.tests.DynamicControlPageTest -->
-      <class name="com.qa.selenium.tests.NotificationMessagePageTest">
-        <methods>
-          <include name="notification"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.qa.selenium.tests.NotificationMessagePageTest -->
       <class name="com.qa.selenium.tests.CheckBoxPageTest">
         <methods>
           <include name="setup"/>
@@ -49,13 +49,13 @@
           <include name="thirdtImgTest"/>
         </methods>
       </class> <!-- com.qa.selenium.tests.MouseHoverPageTest -->
-      <class name="com.qa.selenium.tests.contextPageTest">
+      <class name="com.qa.selenium.tests.FileDownloadPageTest">
         <methods>
           <include name="setup"/>
-          <include name="contextTest"/>
           <include name="teardown"/>
+          <include name="checkDownloadTest"/>
         </methods>
-      </class> <!-- com.qa.selenium.tests.contextPageTest -->
+      </class> <!-- com.qa.selenium.tests.FileDownloadPageTest -->
       <class name="com.qa.selenium.tests.FileUploadPageTest">
         <methods>
           <include name="performeUpload"/>
@@ -64,13 +64,20 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.qa.selenium.tests.FileUploadPageTest -->
-      <class name="com.qa.selenium.tests.FileDownloadPageTest">
+      <class name="com.qa.selenium.tests.contextPageTest">
         <methods>
           <include name="setup"/>
+          <include name="contextTest"/>
           <include name="teardown"/>
-          <include name="checkDownloadTest"/>
         </methods>
-      </class> <!-- com.qa.selenium.tests.FileDownloadPageTest -->
+      </class> <!-- com.qa.selenium.tests.contextPageTest -->
+      <class name="com.qa.selenium.tests.NewTabPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="NewWindowTest"/>
+        </methods>
+      </class> <!-- com.qa.selenium.tests.NewTabPageTest -->
       <class name="com.qa.selenium.tests.IFramePageTest">
         <methods>
           <include name="setup"/>
@@ -88,6 +95,7 @@
       </class> <!-- com.qa.selenium.tests.LoginPageTest -->
       <class name="com.qa.selenium.tests.DropdownPageTest">
         <methods>
+          <include name="teardown"/>
           <include name="setup"/>
           <include name="option2Test"/>
           <include name="option1Test"/>

@@ -16,34 +16,24 @@ public class FileUploadPageTest extends TestBase {
 
 	FileUploadPage fileUploadPage;
 
-	@BeforeMethod 
+	@BeforeMethod
 	public void setup() {
 		initialization();
 		driver.get(prop.getProperty("URL") + "upload");
 		fileUploadPage = new FileUploadPage();
 	}
-	
-	@BeforeTest 
-	public void fileCreate() throws IOException{
-		File f = new File("C:\\Users\\yashh\\Downloads\\sample-upload-text.txt");
-		f.createNewFile();
-		
-		
-	}
-	
-	
+
+
 	@Test
-	public void performeUpload() throws InterruptedException  {
-		fileUploadPage.selectBrowse();
-		fileUploadPage.selectupload();
+	public void performeUpload() throws InterruptedException {
+		fileUploadPage.selectBrowseAndUpload();
 		Assert.assertEquals(fileUploadPage.verifyUpload(), prop.getProperty("UploadVerify"));
-		
+
 	}
-		
+
 	@AfterMethod
 	public void teardown() {
 		driver.quit();
 	}
 
-	
 }

@@ -26,18 +26,11 @@ public class FileUploadPage extends TestBase{
 	}
 	
 
-	public void selectBrowse() {
-		browse().sendKeys("C:\\Users\\yashh\\Downloads\\sample-upload-text.txt");
+	public void selectBrowseAndUpload() {
+		browseBtn.sendKeys(System.getProperty("user.dir")+ "/download/some-file.txt");
+				uploadBtn.click();
+
 		
-		
-	}
-	
-	public void selectupload() {
-		uploadBtn.click();
-	}
-	
-	public WebElement browse() {
-		return browseBtn;
 	}
 	 
 	public String verifyUpload() {

@@ -3,11 +3,14 @@ package com.qa.selenium.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -51,7 +54,16 @@ public class TestBase {
 			
 		} else if (browser.equals("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\SeleniumJars\\chromedriver.exe");
-			driver = new ChromeDriver();
+			
+			String userDir = System.getProperty("user.dir");
+			String downloadPath = userDir + "/downloads";
+
+			Map<String, Object> prefs = new HashMap<String, Object>();
+	 		 ChromeOptions options = new ChromeOptions();
+			 prefs.put("download.default_directory", downloadPath);
+			 options.setExperimentalOption("prefs", prefs);
+			driver = new ChromeDriver(options);
+			
 		} else {
 			System.setProperty("webdriver.safari.driver", "C:\\\\SeleniumJars\\\\safaridriver.exe");
 			driver = new SafariDriver();

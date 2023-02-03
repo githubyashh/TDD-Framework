@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test">
+	  
+	    <listeners>
+        <listener class-name="com.qa.selenium.ExtentReportListener.ExtentReporterNG" />
+    </listeners>
+    
+	  <test name="TDD-Test">
+
     <classes>
       <class name="com.qa.selenium.tests.DynamicContentPageTest"/>
       <class name="com.qa.selenium.tests.contextPageTest"/>

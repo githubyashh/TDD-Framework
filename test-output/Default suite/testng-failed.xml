@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.qa.selenium.tests.NotificationMessagePageTest">
+      <class name="com.qa.selenium.tests.FileUploadPageTest">
         <methods>
-          <include name="notification"/>
-          <include name="tearDown"/>
+          <include name="performeUpload"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.selenium.tests.NotificationMessagePageTest -->
+      </class> <!-- com.qa.selenium.tests.FileUploadPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

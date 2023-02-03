@@ -1,0 +1,17 @@
+com\qa\selenium\tests\DynamicContentPageTest.class
+com\qa\selenium\tests\JavascriptAlertPageTest.class
+com\qa\selenium\tests\LoginPageTest.class
+com\qa\selenium\tests\FileUploadPageTest.class
+com\qa\selenium\tests\FloatingMenuPageTest.class
+com\qa\selenium\tests\DragAndDropPageTest.class
+com\qa\selenium\tests\FileDownloadPageTest.class
+com\qa\selenium\tests\CheckBoxPageTest.class
+com\qa\selenium\tests\JavaScriptErrorPageTest.class
+com\qa\selenium\tests\NotificationMessagePageTest.class
+com\qa\selenium\tests\MouseHoverPageTest.class
+com\qa\selenium\tests\IFramePageTest.class
+com\qa\selenium\tests\DropdownPageTest.class
+com\qa\selenium\tests\DynamicControlPageTest.class
+com\qa\selenium\tests\NewTabPageTest.class
+com\qa\selenium\tests\contextPageTest.class
+com\qa\selenium\tests\DynamicLoadingPageTest.class

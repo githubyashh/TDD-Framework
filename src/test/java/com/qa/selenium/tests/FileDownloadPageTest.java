@@ -1,5 +1,6 @@
 package com.qa.selenium.tests;
 import java.io.File;
+import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -20,11 +21,11 @@ public class FileDownloadPageTest extends TestBase{
 	}
 	
 	@Test
-	public void checkDownloadTest() throws InterruptedException {
+	public void checkDownloadTest() throws InterruptedException, IOException {
 		fileDownloadPage.DownloadStart();
-		File f = new File("C:\\Users\\yashh\\Downloads");
+		File f = new File(System.getProperty("user.dir") +"/download/some-file.txt");                                        //("C:\\Users\\yashh\\Downloads");
+
 		Thread.sleep(3000);
-		
 		boolean check = f.exists();
 		Assert.assertEquals(check, true, "Cound not find the File");
 		
